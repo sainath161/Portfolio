@@ -137,6 +137,24 @@ section .title::after {
   font-weight: 600;
 }
 
+.navbar {
+  opacity: 0;
+  transform: translateY(-100%);
+  animation: fadeInFromTopNav .5s forwards, slideFromTopNav .5s forwards;
+}
+
+@keyframes fadeInFromTopNav {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideFromTopNav {
+  to {
+    transform: translateY(0);
+  }
+}
+
 /*  Nav Logo Span Linear-Gradient  */
 .navbar .logo a span {
   background: linear-gradient(135deg, #1178ff, #fff, crimson);
@@ -206,7 +224,9 @@ section .title::after {
 }
 
 .scroll-up-btn:hover {
-  filter: brightness(90%);
+  /* filter: brightness(90%); */
+  background-color: #0a66c2;
+  color: #f57308;
 }
 
 /*  Home  */
@@ -272,6 +292,20 @@ section .title::after {
   background: none;
   animation: pulsate 1s ease-in-out;
 }
+
+.home-content {
+  opacity: 0;
+  transform: translateX(-100%);
+  animation: fadeInFromLeftContent 2s forwards;
+}
+
+@keyframes fadeInFromLeftContent {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 
 /*  About  */
 .about {
@@ -486,19 +520,18 @@ section .title::after {
 .works.animated .card:nth-child(1) {
   opacity: 1; /* Make visible */
   transform: scale(1); /* Reset scale */
-  transition-delay: 0.5s; /* Delay for 0.5 second */
 }
 
 .works.animated .card:nth-child(2) {
   opacity: 1; /* Make visible */
   transform: scale(1); /* Reset scale */
-  transition-delay: 1.5s; /* Delay for 1.5 seconds */
+  transition-delay: 0.1s; /* Delay for 1.5 seconds */
 }
 
 .works.animated .card:nth-child(3) {
   opacity: 1; /* Make visible */
   transform: scale(1); /* Reset scale */
-  transition-delay: 2.5s; /* Delay for 2.5 seconds */
+  transition-delay: 0.2s; /* Delay for 2.5 seconds */
 }
 
 
@@ -765,13 +798,15 @@ section .title::after {
 }
 
 .projects .buttons a:hover {
-  color: #ffe100;
+  color: gainsboro;
+  font-weight: bolder;
   background: none;
   animation: pulsate 1s ease-in-out;
 }
 
 .projects .carousel .card .text {
   font-size: 25px;
+  color: sandybrown;
   font-weight: 500;
   margin: 10px 0 7px 0;
 }
@@ -858,6 +893,38 @@ section .title::after {
   background-color: #555;
 }
 
+.projects .title {
+  opacity: 0;
+  transform: translateY(-50px);
+}
+
+.projects .card {
+  opacity: 0;
+  transform: scale(0.5);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.projects-in-view .title {
+  animation: popup 1s forwards;
+}
+
+.projects-in-view .card {
+  animation: scaleUp 0.5s forwards;
+}
+
+@keyframes popup {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleUp {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
 
 /*  Resume  */
 /*****EXPERIENCE SECTION*****/
@@ -1101,6 +1168,24 @@ section .title::after {
   background: none;
   animation: pulsate 1s ease-in-out;
 }
+
+
+#contact .title,
+  #contact .column.left,
+  #contact .column.right {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  }
+
+  #contact-in-view .title {
+    animation: popup 1s forwards;
+  }
+
+  #contact-in-view .column.left,
+  #contact-in-view .column.right {
+    animation: slideIn 1s forwards;
+  }
 
 /*  Social  */
 .col-4 {
@@ -1366,87 +1451,3 @@ footer span a:hover {
     line-height: 38px;
   }
 }
-
-
-/* Your existing styles */
-
-.navbar {
-  opacity: 0;
-  transform: translateY(-100%);
-  animation: fadeInFromTopNav .5s forwards, slideFromTopNav .5s forwards;
-}
-
-@keyframes fadeInFromTopNav {
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes slideFromTopNav {
-  to {
-    transform: translateY(0);
-  }
-}
-
-.home-content {
-  opacity: 0;
-  transform: translateX(-100%);
-  animation: fadeInFromLeftContent 2s forwards;
-}
-
-@keyframes fadeInFromLeftContent {
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-.projects .title {
-  opacity: 0;
-  transform: translateY(-50px);
-}
-
-.projects .card {
-  opacity: 0;
-  transform: scale(0.5);
-  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-}
-
-.projects-in-view .title {
-  animation: popup 1s forwards;
-}
-
-.projects-in-view .card {
-  animation: scaleUp 0.5s forwards;
-}
-
-@keyframes popup {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes scaleUp {
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-#contact .title,
-  #contact .column.left,
-  #contact .column.right {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-  }
-
-  #contact-in-view .title {
-    animation: popup 1s forwards;
-  }
-
-  #contact-in-view .column.left,
-  #contact-in-view .column.right {
-    animation: slideIn 1s forwards;
-  }
