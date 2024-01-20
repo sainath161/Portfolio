@@ -1293,6 +1293,12 @@ footer span a:hover {
 }
 
 @media (max-width: 1104px) {
+  .works{
+    height: auto !important;
+  }
+}
+
+@media (max-width: 1104px) {
   .about .about-content .left img {
     height: 350px;
     width: 350px;
@@ -1363,6 +1369,10 @@ footer span a:hover {
     max-width: 930px;
   }
 
+  .about{
+    height: auto !important;
+  }
+
   .about .about-content .column {
     width: 100%;
   }
@@ -1380,6 +1390,10 @@ footer span a:hover {
   .works .serv-content .card {
     width: calc(50% - 10px);
     margin-bottom: 20px;
+  }
+
+  .skills{
+    height: auto !important;
   }
 
   .skills .skills-content .column,
@@ -1449,5 +1463,9 @@ footer span a:hover {
     width: 35px;
     font-size: 23px;
     line-height: 38px;
+  }
+
+  .projects {
+    height: auto !important;
   }
 }
