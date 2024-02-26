@@ -189,6 +189,10 @@ section .title::after {
   color: #fff;
 }
 
+.navbar .menu li a.active {
+  color: #ffbf35;
+}
+
 /*  Menu Btn  */
 .menu-btn {
   color: #fff;
@@ -232,7 +236,7 @@ section .title::after {
 /*  Home  */
 .home {
   display: flex;
-  background: url("https://cutewallpaper.org/21/background-images-for-computer/Software-Background-Vectors-Photos-and-PSD-files-Free-.jpg") no-repeat center;
+  background: url("https://images.pexels.com/photos/4218883/pexels-photo-4218883.jpeg?cs=srgb&dl=pexels-paras-katwal-4218883.jpg&fm=jpg") no-repeat center;
   height: 100vh;
   color: #fff;
   min-height: 500px;
