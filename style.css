@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -378,8 +380,10 @@ section .title::after {
 }
 
 .about .title {
-  opacity: 0; /* Start with 0 opacity */
-  transform: translateY(20px); /* Move down by 20px */
+  opacity: 0;
+  /* Start with 0 opacity */
+  transform: translateY(20px);
+  /* Move down by 20px */
   transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
@@ -393,14 +397,18 @@ section .title::after {
 }
 
 .about .title {
-  opacity: 0; /* Start with 0 opacity */
-  transform: translateY(20px); /* Move down by 20px */
+  opacity: 0;
+  /* Start with 0 opacity */
+  transform: translateY(20px);
+  /* Move down by 20px */
   transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 .about.animated .title {
-  opacity: 1; /* Make visible */
-  transform: translateY(0); /* Reset translation */
+  opacity: 1;
+  /* Make visible */
+  transform: translateY(0);
+  /* Reset translation */
 }
 
 .about .column.left img {
@@ -442,7 +450,8 @@ section .title::after {
 /*  Works  */
 .works {
   height: 100vh;
-  }
+}
+
 .works,
 .projects {
   color: #fff;
@@ -503,39 +512,53 @@ section .title::after {
 }
 
 .works .title {
-  opacity: 0; /* Start with 0 opacity */
-  transform: translateY(20px); /* Move down by 20px */
+  opacity: 0;
+  /* Start with 0 opacity */
+  transform: translateY(20px);
+  /* Move down by 20px */
   transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 /* CSS for .card */
 .works .card {
-  opacity: 0; /* Start with 0 opacity */
-  transform: scale(0); /* Start with scale 0 */
+  opacity: 0;
+  /* Start with 0 opacity */
+  transform: scale(0);
+  /* Start with scale 0 */
   transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 /* Add the animated class to trigger the animations */
 .works.animated .title {
-  opacity: 1; /* Make visible */
-  transform: translateY(0); /* Reset translation */
+  opacity: 1;
+  /* Make visible */
+  transform: translateY(0);
+  /* Reset translation */
 }
 
 .works.animated .card:nth-child(1) {
-  opacity: 1; /* Make visible */
-  transform: scale(1); /* Reset scale */
+  opacity: 1;
+  /* Make visible */
+  transform: scale(1);
+  /* Reset scale */
 }
 
 .works.animated .card:nth-child(2) {
-  opacity: 1; /* Make visible */
-  transform: scale(1); /* Reset scale */
-  transition-delay: 0.1s; /* Delay for 1.5 seconds */
+  opacity: 1;
+  /* Make visible */
+  transform: scale(1);
+  /* Reset scale */
+  transition-delay: 0.1s;
+  /* Delay for 1.5 seconds */
 }
 
 .works.animated .card:nth-child(3) {
-  opacity: 1; /* Make visible */
-  transform: scale(1); /* Reset scale */
-  transition-delay: 0.2s; /* Delay for 2.5 seconds */
+  opacity: 1;
+  /* Make visible */
+  transform: scale(1);
+  /* Reset scale */
+  transition-delay: 0.2s;
+  /* Delay for 2.5 seconds */
 }
 
 
@@ -710,31 +733,38 @@ section .title::after {
 }
 
 .skills-in-view .html::before {
-  animation: fillLine 1.8s forwards; /* 90% of 2s */
+  animation: fillLine 1.8s forwards;
+  /* 90% of 2s */
 }
 
 .skills-in-view .css::before {
-  animation: fillLine 1.8s forwards; /* 90% of 2s */
+  animation: fillLine 1.8s forwards;
+  /* 90% of 2s */
 }
 
 .skills-in-view .bootstrap::before {
-  animation: fillLine 1.6s forwards; /* 80% of 2s */
+  animation: fillLine 1.6s forwards;
+  /* 80% of 2s */
 }
 
 .skills-in-view .js::before {
-  animation: fillLine 1.2s forwards; /* 60% of 2s */
+  animation: fillLine 1.2s forwards;
+  /* 60% of 2s */
 }
 
 .skills-in-view .react::before {
-  animation: fillLine 1s forwards; /* 50% of 2s */
+  animation: fillLine 1s forwards;
+  /* 50% of 2s */
 }
 
 .skills-in-view .angular::before {
-  animation: fillLine 1s forwards; /* 50% of 2s */
+  animation: fillLine 1s forwards;
+  /* 50% of 2s */
 }
 
 .skills-in-view .java::before {
-  animation: fillLine 1.4s forwards; /* 70% of 2s */
+  animation: fillLine 1.4s forwards;
+  /* 70% of 2s */
 }
 
 
@@ -742,6 +772,7 @@ section .title::after {
 #projects {
   height: 100vh;
 }
+
 .projects .title::after {
   content: "What I did ?";
   color: #b3b3b3;
@@ -996,59 +1027,59 @@ section .title::after {
 }
 
 #resume .title,
-  #resume .edu-exp,
-  #resume .heading-text,
-  #resume .education-list,
-  #resume .experience-list {
-    opacity: 0;
-    transform: translateY(-50px);
-    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-  }
+#resume .edu-exp,
+#resume .heading-text,
+#resume .education-list,
+#resume .experience-list {
+  opacity: 0;
+  transform: translateY(-50px);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
 
-  #resume-in-view .title {
-    animation: popup 1s forwards;
-  }
+#resume-in-view .title {
+  animation: popup 1s forwards;
+}
 
-  #resume-in-view .edu-exp {
-    animation: slideInTop 0.5s forwards;
-  }
+#resume-in-view .edu-exp {
+  animation: slideInTop 0.5s forwards;
+}
 
-  #resume-in-view .heading-text,
-  #resume-in-view .education-list {
-    animation: slideInLeft 0.5s forwards;
-  }
+#resume-in-view .heading-text,
+#resume-in-view .education-list {
+  animation: slideInLeft 0.5s forwards;
+}
 
-  #resume-in-view .experience-list {
-    animation: slideInRight 0.5s forwards;
-  }
+#resume-in-view .experience-list {
+  animation: slideInRight 0.5s forwards;
+}
 
-  @keyframes popup {
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+@keyframes popup {
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
+}
 
-  @keyframes slideInTop {
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+@keyframes slideInTop {
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
+}
 
-  @keyframes slideInLeft {
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
+@keyframes slideInLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
+}
 
-  @keyframes slideInRight {
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
+@keyframes slideInRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
+}
 
 /*  Contact  */
 .contact {
@@ -1103,18 +1134,83 @@ section .title::after {
   color: #cbc3c3;
 }
 
-.contact .right form .fields {
+.contact .right form {
+  width: auto;
+  text-align: center;
+}
+
+form .input-box {
   display: flex;
+  justify-content: space-between;
 }
 
-.contact .right form .field,
-.contact .right form .fields .field {
-  height: 45px;
+.input-box .input-field {
+  width: 48.5%;
+}
+
+.field .item {
   width: 100%;
-  margin-bottom: 15px;
+  padding: 18px;
+  background: transparent;
+  border: 2px solid #0ef;
+  outline: none;
+  border-radius: 6px;
+  font-size: 16px;
+  color: #ededed;
+  margin: 12px 0;
+  transition: 0.3s ease all;
 }
 
-.contact .right form .textarea {
+.field.error .item {
+  border: 2px solid #d93025;
+}
+
+.field .item::placeholder {
+  color: rgba(255, 255, 255, .3);
+}
+
+.field .error-txt {
+  font-size: 14.5px;
+  color: #d93025;
+  text-align: left;
+  margin: -5px 0 10px;
+  display: none;
+}
+
+.field.error .error-txt {
+  display: block;
+}
+
+form .textarea-field .item {
+  resize: none;
+}
+
+form .textarea-field .error-txt {
+  margin-top: -10px;
+}
+
+form button {
+  padding: 12px 32px;
+  background: #0ef;
+  border: none;
+  color: #333;
+  cursor: pointer;
+  border-radius: 6px;
+  box-shadow: 0 0 10px #0ef;
+  letter-spacing: 1px;
+  font-weight: 600;
+  margin-top: 20px;
+  text-transform: uppercase;
+  font-size: 16px;
+  outline: none;
+  transition: 0.3s ease all;
+}
+
+form button:hover {
+  box-shadow: none;
+}
+
+/* .contact .right form .textarea {
   height: 80px;
   width: 100%;
 }
@@ -1134,7 +1230,7 @@ section .title::after {
   font-size: 17px;
   font-family: "Poppins", sans-serif;
   transition: all 0.3s ease;
-}
+} */
 
 .contact .right form .field input:focus,
 .contact .right form .textarea textarea:focus {
@@ -1175,21 +1271,21 @@ section .title::after {
 
 
 #contact .title,
-  #contact .column.left,
-  #contact .column.right {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-  }
+#contact .column.left,
+#contact .column.right {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
 
-  #contact-in-view .title {
-    animation: popup 1s forwards;
-  }
+#contact-in-view .title {
+  animation: popup 1s forwards;
+}
 
-  #contact-in-view .column.left,
-  #contact-in-view .column.right {
-    animation: slideIn 1s forwards;
-  }
+#contact-in-view .column.left,
+#contact-in-view .column.right {
+  animation: slideIn 1s forwards;
+}
 
 /*  Social  */
 .col-4 {
@@ -1297,7 +1393,7 @@ footer span a:hover {
 }
 
 @media (max-width: 1104px) {
-  .works{
+  .works {
     height: auto !important;
   }
 }
@@ -1373,7 +1469,7 @@ footer span a:hover {
     max-width: 930px;
   }
 
-  .about{
+  .about {
     height: auto !important;
   }
 
@@ -1396,7 +1492,7 @@ footer span a:hover {
     margin-bottom: 20px;
   }
 
-  .skills{
+  .skills {
     height: auto !important;
   }
 
