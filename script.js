@@ -46,7 +46,7 @@ $(document).ready(function () {
     ],
     typeSpeed: 100,
     backSpeed: 60,
-    loop: true
+    loop: true,
   });
 
   var typed = new Typed(".typing-2", {
@@ -57,7 +57,7 @@ $(document).ready(function () {
     ],
     typeSpeed: 100,
     backSpeed: 60,
-    loop: true
+    loop: true,
   });
 
   //  Owl Carousel  //
@@ -71,17 +71,17 @@ $(document).ready(function () {
     responsive: {
       0: {
         items: 1,
-        nav: false
+        nav: false,
       },
       600: {
         items: 2,
-        nav: false
+        nav: false,
       },
       1000: {
         items: 3,
-        nav: false
-      }
-    }
+        nav: false,
+      },
+    },
   });
 
   $(".navbar .menu li a").click(function () {
@@ -95,8 +95,6 @@ $(document).ready(function () {
     $("html").css("scrollBehavior", "smooth");
   });
 });
-
-
 
 document.addEventListener("DOMContentLoaded", function () {
   const aboutSection = document.querySelector(".about");
@@ -113,22 +111,21 @@ document.addEventListener("DOMContentLoaded", function () {
   observer.observe(aboutSection);
 });
 
-
-
-
 // JavaScript for adding 'animated' class when the section is visible
 document.addEventListener("DOMContentLoaded", function () {
   var worksSection = document.querySelector(".works");
-  var observer = new IntersectionObserver(function (entries) {
-    entries.forEach(function (entry) {
-      if (entry.isIntersecting && entry.intersectionRatio >= 0.5) {
-        worksSection.classList.add("animated");
-      }
-    });
-  }, { threshold: 0.5 }); // Adding threshold: 0.5
+  var observer = new IntersectionObserver(
+    function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting && entry.intersectionRatio >= 0.5) {
+          worksSection.classList.add("animated");
+        }
+      });
+    },
+    { threshold: 0.5 }
+  ); // Adding threshold: 0.5
   observer.observe(worksSection);
 });
-
 
 document.addEventListener("DOMContentLoaded", function () {
   var skillsSection = document.querySelector("#skills");
@@ -157,28 +154,30 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-
-
 document.addEventListener("DOMContentLoaded", function () {
   var projectsSection = document.querySelector(".projects");
   var cards = document.querySelectorAll(".card");
 
-  var observer = new IntersectionObserver(function (entries) {
-    entries.forEach(function (entry, index) {
-      if (entry.isIntersecting) {
-        projectsSection.classList.add("projects-in-view");
-        animateTitle();
-        animateCard(index);
-      } else {
-        projectsSection.classList.remove("projects-in-view");
-      }
-    });
-  }, { threshold: 0.5 });
+  var observer = new IntersectionObserver(
+    function (entries) {
+      entries.forEach(function (entry, index) {
+        if (entry.isIntersecting) {
+          projectsSection.classList.add("projects-in-view");
+          animateTitle();
+          animateCard(index);
+        } else {
+          projectsSection.classList.remove("projects-in-view");
+        }
+      });
+    },
+    { threshold: 0.5 }
+  );
 
   observer.observe(projectsSection);
 
   function animateTitle() {
-    projectsSection.querySelector(".title").style.animation = "popup 1s forwards";
+    projectsSection.querySelector(".title").style.animation =
+      "popup 1s forwards";
   }
 
   function animateCard(index) {
@@ -191,18 +190,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener("DOMContentLoaded", function () {
   var resumeSection = document.querySelector("#resume");
-  var elementsToAnimate = document.querySelectorAll("#resume .title, #resume .edu-exp, #resume .heading-text, #resume .education-list, #resume .experience-list");
+  var elementsToAnimate = document.querySelectorAll(
+    "#resume .title, #resume .edu-exp, #resume .heading-text, #resume .education-list, #resume .experience-list"
+  );
 
-  var observer = new IntersectionObserver(function (entries) {
-    entries.forEach(function (entry) {
-      if (entry.isIntersecting) {
-        resumeSection.classList.add("resume-in-view");
-        animateElements();
-      } else {
-        resumeSection.classList.remove("resume-in-view");
-      }
-    });
-  }, { threshold: 0.5 });
+  var observer = new IntersectionObserver(
+    function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          resumeSection.classList.add("resume-in-view");
+          animateElements();
+        } else {
+          resumeSection.classList.remove("resume-in-view");
+        }
+      });
+    },
+    { threshold: 0.5 }
+  );
 
   observer.observe(resumeSection);
 
@@ -217,8 +221,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-
-
 document.addEventListener("DOMContentLoaded", function () {
   var contactSection = document.querySelector("#contact");
   var title = document.querySelector("#contact .title");
@@ -226,16 +228,19 @@ document.addEventListener("DOMContentLoaded", function () {
   var rightColumn = document.querySelector("#contact .column.right");
   var buttonArea = document.querySelector("#contact .button-area");
 
-  var observer = new IntersectionObserver(function (entries) {
-    entries.forEach(function (entry) {
-      if (entry.isIntersecting) {
-        contactSection.classList.add("contact-in-view");
-        animateColumns();
-      } else {
-        contactSection.classList.remove("contact-in-view");
-      }
-    });
-  }, { threshold: 0.5 });
+  var observer = new IntersectionObserver(
+    function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          contactSection.classList.add("contact-in-view");
+          animateColumns();
+        } else {
+          contactSection.classList.remove("contact-in-view");
+        }
+      });
+    },
+    { threshold: 0.5 }
+  );
 
   observer.observe(contactSection);
 
@@ -257,5 +262,98 @@ document.addEventListener("DOMContentLoaded", function () {
       buttonArea.style.opacity = 1;
       buttonArea.style.transform = "translateY(0)";
     }, 1500); // 3 seconds delay
+  }
+});
+
+const form = document.querySelector("form");
+const fullName = document.getElementById("name");
+const email = document.getElementById("email");
+const phone = document.getElementById("phone");
+const subject = document.getElementById("subject");
+const mess = document.getElementById("message");
+
+function sendEmail() {
+  const bodyMessage = `Name: ${fullName.value} <br> Email: ${email.value}<br>Phone Number: ${phone.value}<br>Subject: ${subject.value}<br>Message: ${mess.value} `;
+  Email.send({
+    SecureToken: "3aa07471-752e-4a6a-b1dd-fa6054ff0893",
+    To: "sainathsmart1234@gmail.com",
+    From: "sainathsmart1234@gmail.com",
+    Subject: subject.value,
+    Body: bodyMessage,
+  }).then((message) => {
+    if (message == "OK") {
+      Swal.fire({
+        title: "Success!",
+        text: "Message sent successfully!",
+        icon: "success",
+      });
+    }
+  });
+}
+
+function checkInputs() {
+  const items = document.querySelectorAll(".item");
+
+  for (const item of items) {
+    if (item.value == "") {
+      item.classList.add("error");
+      item.parentElement.classList.add("error");
+    }
+
+    if (items[1].value != "") {
+      checkEmail();
+    }
+
+    items[1].addEventListener("keyup", () => {
+      checkEmail();
+    });
+
+    item.addEventListener("keyup", () => {
+      if (item.value != "") {
+        item.classList.remove("error");
+        item.parentElement.classList.remove("error");
+      } else {
+        item.classList.add("error");
+        item.parentElement.classList.add("error");
+      }
+    });
+  }
+}
+
+function checkEmail() {
+  const emailRegex =
+    /^([a-z\d\.-]+)@([a-z\d-]+)\.([a-z]{2,3})(\.[a-z]{2, 3})?$/;
+  const errorTxtEmail = document.querySelector(".error-txt.email");
+
+  if (!email.value.match(emailRegex)) {
+    email.classList.add("error");
+    email.parentElement.classList.add("error");
+
+    if (email.value != "") {
+      errorTxtEmail.innerHTML = "Enter a Valid Email";
+    } else {
+      errorTxtEmail.innerHTML = "Email can't be blank";
+    }
+  } else {
+    email.classList.remove("error");
+    email.parentElement.classList.remove("error");
+  }
+}
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  checkInputs();
+
+  if (
+    !fullName.classList.contains("error") &&
+    !email.classList.contains("error") &&
+    !phone.classList.contains("error") &&
+    !subject.classList.contains("error") &&
+    !mess.classList.contains("error")
+  ) {
+    sendEmail();
+
+    form.reset();
+    return false;
   }
 });
