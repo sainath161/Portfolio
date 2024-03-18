@@ -412,30 +412,30 @@ section .title::after {
 }
 
 .about .column.left img {
-  transform: translateX(-550px);
+  transform: translateY(-100px);
   /* Change to move from left */
   transition-duration: 1s;
 }
 
 .about .column.right div {
-  transform: translateX(150px);
+  transform: translateY(100px);
   /* Change to come from right */
-  transition-duration: 1.5s;
-  transition-delay: 1s;
+  transition-duration: 1s;
+  transition-delay: 0.5s;
 }
 
 .about .column.right p {
-  transform: translateX(150px);
+  transform: translateY(100px);
   /* Change to come from right */
-  transition-duration: 1.5s;
-  transition-delay: 1s;
+  transition-duration: 1s;
+  transition-delay: 0.5s;
 }
 
 .about .column.right a {
-  transform: translateY(20px);
+  transform: translateX(-50px);
   /* Change to come from bottom */
-  transition-duration: 1s;
-  transition-delay: 2.5s;
+  transition-duration: 1.5s;
+  transition-delay: 1s;
 }
 
 .about.animated .column.left img,
@@ -1488,7 +1488,7 @@ footer span a:hover {
   }
 
   .works .serv-content .card {
-    width: calc(50% - 10px);
+    width: 100%;
     margin-bottom: 20px;
   }
 
